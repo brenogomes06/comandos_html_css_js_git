@@ -1,0 +1,126 @@
+Para linkar o seu html com o código html, você precisa colocar <script src= nome do arquivo> </script>. Tem que estar depois do body e antes do fim html.
+
+	<DOCTYPE>
+		<html>
+			<head>
+			</head>
+
+			<body>
+			</body>
+
+			<script src= nome do arquivo> </script>
+		</html>
+
+
+
++console.log ("informação que você quer que apareça") :é preciso estar dentro do parenteses e também da aspas duplas.
+é igual o print do pyton.
+
+Obrigatóriamente, é necessário colocar ponto e virgula ";" para indicar que a informação na linha acabou.
+
+Se não der certo, verifique:
+1. Se deu F5 (atualizou a página)
+2. Se o comando está escrito corretamente.
+3. Se o html está logado corretamente com o arquivo JS.
+
+
++alert("informação que você quer que apareça):  aviso de alerta.  Aparecerá um pop-up que só irá deixar prosseguir com a página quando clicar em "ok".
+
++confirm("informação que você quer que apareça): Pergunta para confirmar a ação na página. parecido com o alert, mas tem opções diferentes para escolher.
+
++prompt("informação que você quer que apareça): Abrirá uma caixa para digitar o que for solicitado. Como se fosse input.
+
+-------------------------------------------------------------------------------------------------------------------------
+
++var: comando de variável, onde a variável guarda informação que você determinou que deveria ser salva. A variavel deve ter um nome relacionado com o que você estiver fazendo. (sem acentos, sem letras maiuscula e sem espaços nem traços). A variável é um "valor" que você determina, podendo ser um número, nome ou qualquer outra informação.
+
+Para aplicar:
+ 1º: determine o nome da variável.
+ 2º: defina qual será o valor(informação) que a variável terá. (pode ser somente um valor por variável)
+ 3º: Para "correr" o código --> ex: console.log(nome da variável) {sem as aspas}.
+                                    alert(nome da variavel)
+
+OBS:  cada variável precisa ter seu próprio nome se tiver um valor diferente. O mesmo nome de váriável não pode ser aplicado para mais de um valor diferente
+	EX: var numero = 300							var numero = 300
+    	    var numero = 600							var numero2 = 600
+
+No caso acima o código irá ler apenas o último valor colocado. / Acima seria o correto a se fazer ao criar uma nova variavel.
+
+
+Comando tipos diferentes de variáveis:
++number: para qualquer número que queira colocar como variável
+
++string: para textos e palavras
+
++bool: valores verdadeiros ou falsos (true or false)
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Para colocar duas ou mais variáveis/textos na mesma linha dentro do seu código, basta separar por virgula quando escrever dentro do console.log()
+	EX. console.log(var1, var2);
+
+
+É possível fazer contas também, usando as operações básicas.
++(adição), -(subtração), /(divisão), *(multiplicação).
+
+É possível também fazer as operações com as variáveis.
+
+-------------------------------------------------------------------------------------------------------------------------
+
++document.write: comando parecido com o console, mas com a diferença de que a informação que for escrita aparecerá na página ao invés do console.
+
+-------------------------------------------------------------------------------------------------------------------------
+
++if é o comando para apresentar condicional. SE
+if(o que está acontecendo for verdade)
+{
+	configuração que você quer usar
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+
++nome da variavel.lenght -> string  (conta o número de caracteres que a variável tem. tanto letras como acentos e outras paradinhas)
+
++nome da variavel.toLowercase() -> string  (Toda informação coletada no input ou console será regsitrada como minuscula)
+
++nome da variavel.toUppercase() -> string  (Toda informação coletada no input ou console será regsitrada como maiuscula)
+
++String(variavel) Para converter uma variável que seja number para ser uma string
+
++Number(variavel) para converter uma variável que seja uma string para ser um number.
+
+-------------------------------------------------------------------------------------------------------------------------
+
++&&: comando que representa "e" na condicional if, se eu quero colocar mais de uma condição. Fará com que as condições funcionem quando as informações forem obedecidas.	
+
++else: senão
+Só coloco um else se houver um "if".  Se a condição dor respeitada, o programa vai acontecer como a condição imposta, senão será outra coisa.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Para utlizar os elementos do código dentro do JS, primeiro deve haver uma identificação (tanto por classe, id ou )
+Depois de identificado no código JS, você coloca a variavel e seu nome= ... a partir daqui é um novo comando. Você irá acessar o seu elemento pelo id ou classe que você escreveu.
+
++document.getElementById("nome do id")
+
+						--------------------------
+
+O processo será parecido para guardar classe dentro de uma variável, porém há alguma diferenças importantes para serem notadas.
+
+Note que quando você usa o getElementsByClassName, a palavra Elements está no plural. Isso significa que já que haverá mais de um elemento com a mesma classe(teoricamente), você deve informar qual elemento daquela classe você quer usar. Para isso, o próprio programa já determina uma sequencia de números, na ordem que os elementos aparecem no seu código, começando do "0" que é o primeiro elemento, o segundo será o "1" e assim por diante.
+
+Para usar o comando no final você coloca a variável, o nome da variável, informa que vai pegar os elementos por nome da classe e por último coloca o número associado à classe que você quer selecionar.
+
++document.getElementsByClassName("nome da classe")[1];
+
+EX:  imagine que tenho um h1[0], um p[1]  e uma div[2], todas com o mesmo nome de classe = "texto" e quero guardar em uma variável a div
+
+var informacao = document.getElementsByClassName("texto")[2]
+
+^
+|  significa que eu guardei a div dentro da variável que eu nomeei como informacao.
+
+					-------------------------------------------
+
+
+	

@@ -1,0 +1,355 @@
+É possível fazer o CSS dentro do código html.
+
+---Você pode abrir uma Tag <style> </style> usar a marcação "id" dento do head do código. Você pega um elemnto do body que queira estilizar e coloca dentro do style.
+
+EX		<style>
+ 			h1
+			{
+				color: (pode ser usado códigos diferentes para identificar a cor)
+					hexadecimal, numeros, rgb ou usando o gráfico clicando na cor.
+			}
+		</style>
+
+---Todo o código acima pode ser usando no html, dentro do head. Porém será mais fácil abrir um arquivo CSS pra começar a fazer os códigos.
+
+---Para fazer comentário no CSS: /* faça sua anotação aqui */
+
+---É possivel aplicar a mesma propriedade em mais de um comando se você colocar uma virgula e o outro comando. 
+
+EX:		<style>
+ 			h1, p, h2, 
+			{
+				background-color: cor
+			}
+		</style>
+
+Dessa maneira, todos os h1's, p's e h2's que estiverem ao decorrer do código irão ter a aplicação dessa propriedade configurada. Mas nem sempre vou querer que todos os elemntos tenham a mesma configuração e vou querer variar o estilo.
+Para isso eu vou usar os métodos de marcação mais individualizados ou agrupados para configurar à minha maneira, usando os atributos "id" e o "class".
+
+---------------------------------------------------------------------------------------------------------------------------
+
+id: dá literalmente identidade única para o comando. torna único. Durante seu código não tem como você usar o mesmo id para comandos diferentes
+
+EX: (no body)	<h1 id="teste"> Meu título <h1> 	(no head) #teste
+								  {
+		somente esse h1 no código inteiro			color: blue;
+		irá receber essa propriedade.			  }
+
+
+
+class: agrupa os comandos em um grupo específico onde será aplicado as configurações e receberão as mesmas propriedades informadas.
+
+EX: (no body)	<p class="testando"> um novo comando </p>		(no head) .testando	
+		<p> um velho comando </p>			  		  {
+		<p class="testando"> um outro comando </p>				background-color: red;
+		<p class="testando"> um diferente comando </p>			  }
+		<p class="testando"> um new comando </p>			  
+
+Como no exemplo acima, só o que estiver marcado com o atributo "class" irá receber a propriedade de fundo de cor vermelho. O que não estiver marcado não terá nenhuma alteração.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Comando background-color: muda o fundo do comando que você deseja. (body, h1, p, form...)
+O comando color já altera a letra que está escrita ou que será escrita. Pode ser aplicado em basicamento todos os comandos assim como o background-color também.
+
+Sempre que terminar de dar a ordem para estilizar o comando, deve sempre colocar um ponto e virgula para finalizar.
+
+
+---Configurações para mudar a fonte:
+
+- font-family: muda o estilo da fonte, o tipo de letra que será escrita (arial, times new roman, cursive...)
+- font-size: tamanho da fonte. É preciso determinar o tamanho passando um valor em pixels (40px; 100px;)
+- font-weight: Coloco oou tiro o negrito (bold, normal)
+- font-style: dá pra colocar itálico (italic, oblique)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+----Em uma lista ordenada há alguns atributos específicos que podem ser aplicados exclusivamente para ele:
+-Reverserd  ( a lista inverte a ordem da numeração )
+-start (depois colocar o número específico que você queira começar a contagem)
+-type (o tipo de simbolo da contagem que você quer colocar. Número, letra, numero romano)
+
+
+----Em uma lista não ordenada usaremos o CSS para mudar os marcadores da lista. Há diversos marcadores diferentes:
++ disc (padrão)
++ Square
++ none (quando não quer marcador algum)
++ entre outros que estão disponíveis quando o comando é selecionado no style do html
+	------    aplicar list-style-type : "configuração que deseja"
+
+
+---- Se eu quiser alinhar meu texto no meio eu devo usar no style o comando text-align: Left, center ou right
+
+----posso colocar largura, altura
+width: 100px ou 50%
+height: 200px ou 30%
+
+-para sublinhar o meu texto: text-decoration: underline (se eu não quiser, pode colocar "none" que é pra tirar se já estiver sublinhado.)
+
+---------------------------------------------------------------------------------------------------------------------------
+
+--- Adicionar sombra no texto com CSS
+text-shadow: então terão 4 valores para serem colocado -->    direção da sombra pra direita, direção da sombra pra baixo, borrar a sombra e a cor. Teste sempre para ver como irá ficar.
+EX: 
+
+text-shadow: 5px 2px 6px blue  (5 pixels pra direita, 2 pixels pra baixo, borrar a letra em  pixels, sombra da cor azul)
+
+---------------------------------------------------------------------------------------------------------------------------
+
+---------A PARTIR DE AGORA VOCÊ COMEÇARÁ A USAR UM ARQUIVO PRÓPRIO PARA O CSS. NOMEDOARQUIVO.CSS-------------
+
+Para que o CSS seja aplicado no código html é preciso um comando e dois atributos.
+
+<link rel"stylesheet" href"estilo.css">
+
++ O comando "link" é para indicar que haverá um outro documento que irá agir e está relacionado com o código html em questão
++ O atributo "href" indica qual é o arquivo na pasta que está sendo linkado providenciando o link de referência
++ O atributo "rel" mostra o relacionamento que o arquivo terá no código. stylesheet=folha de estilo
+
+--------------------------------------------------------------------------------------------------------------------------
+
+---Há o comando de fazer um quadrado(ou borda) para a parte CSS. Dentro de <style>, assim como font-weight, font-size, etc, você pode colocar o comando border.
+O border tem três tipos diferentes:
+- o cheio = solid  (um quadrado normal)
+- o tracejado = dashed (traços que formam o quadrado)
+- o pontilhado = dotted (pontos que formam o quadrado)
+
+---Quando os links são colocados, automaticamente vem um sublinhado junto. Para tirar o sublinhado user no CSS o "text-decoration: none;  o sublinhado será retirado.
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+---hover é um comando que quando e passo o mouse por cima de um link ele faz uma reação que modifica visualmente par identificar que pode ocorrer uma ação naquele link personalizado.
+EX: configura todo o elemento no css como o link "a"
+
+a
+{
+	font-size: 40px
+	border: 10px solid black
+	color: white
+	backgorund-color: blue
+}
+
+a:hover
+{
+	background-color: blue-dark
+
+
+Devem haver outras configurações para tornar o botão mais funcional e bonito mas no básico é essa a diferença que há para apresentar no visual.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+---visited, mostra que o link que você clicou já foi visitado no site. Voce pode configurar para deixar uma cor diferente na letra para indicar que link já foi visitado
+
+---background-image: url( );
+Aqui é o colocado uma imagem no background do corpo inteiro do seu código. Pode ser escrito no body (como netflix na página de cadastro)
+
+---backgorund-size: cover;
+Quando a imagem for colocado e o tamanho não for o suficiente para cobrir toda a tela a imagem começa a se repetir. o comando "cover" fará que a imagem seja ajustada para o tamanho da tela. (dependendo da resolução da foto a qualidade pode ser menor)
+
+---backgorund-position:
+A parte da imagem que vai ser exposta. há pelo menos 9seções. Aqui você escolhe qual é o pedaço que vai ser exibido. (geralmente usado nas DIV's)
+
+
+---outline é um comando usado especificamente para os inputs, onde você delineia uma linha de fora quando o é selecionado um input para ser escrito.
+Ex: outline: 2px
+
+Então você pode escolher o outline-color para determinar qual a cor da linha que ficará quando o input ser selecionado.
+Ex: outline: 2px
+    outline-color: blue
+Então quer dizer quando eu quiser digitar um e-mail, por exemplo, terá uma linha azul em volta da caixa depois de eu ter clicado nela para digitar.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Margin é um comando para configurar posição do elemento que você colocou na página. Tem a margem do topo ↑, direita →, baixo ↓ e esquerda ←. A aplicação para configurar sempre será no sentido horário, colocando valores por pixels.
+ EX:
+	h1
+	{
+		margin: 10px (cima/top) 20px (direita/right) 5px (baixo/bottom) 10px (esquerda/left);
+	}
+
+Também posso colocar usando um comando pra cada lado. O que será melhor vai depender de você para o momento.
+ EX:
+	h1
+	{
+		margin-top: 10px;
+		margin-right: 20px;  *Não quer dizer que é o espaçamento para o lado direito mas no lado direito da tela*
+		margin-botton: 5px;
+		margin-left: 10px;   *Não quer dizer que é o espaçamento para o lado esquerdo mas no lado esquerdo da tela*
+	}
+
+Se colocar apenas- margin: 0px -  então 0 margem para todos os lados será aplicado de uma vez.
+
+
+Padding é o comando para configurar o espaço que o elemento está ocupando dentro de seu pai. Muito semelhante ao margin a única diferença é o espaçamento que o elemento está ocupando. Para configurar são os mesmos comandos que o "margin" porém trocando a palavra por "padding".
+
+--------------------------------------------------------------------------------------------------------------------------
+
+As DIVs são divisões que você faz no seu código e que também dividem a página. É a forma mais fácil de organizar a sua página e aplicar as configurações no CSS.
+	dica: Para saber quanto espaço cada DIV e filho dela está ocupando na página, use o background-color para usar como identificação na hora de configurar as margens e paddings.
+
+Para acessar um comando específico podemos separar por classe ou id. As vezes colocar Id é muito trabalhoso, então podemos acessar um comando "filho" de um "pai" específico. escrevendo o pai e o filho sem a vírgula antes das chaves {}.
+ EX:
+	DIV h1
+	{
+		background-color: red
+	}
+
+Quanto mais simples e menos complexo for o seu código, será melhor. Mas também tente "compactar"/enxugar" seu código.
+---------------------------------------------------------------------------------------------------------------------------
+
+As DIVs podem ser separadas uma dentro da outra, para cada sessão que você vá configurar a sua página. Ajuda na organização e na identificação para uma manutenção depois.
+
+	dica: depois de terminar de fazer uma configuração esconda uma sessão para limpar o visual do seu código, usando a flecha ao ládo do número da linha.
+
+Há DIVs específicas para cada sessão da página para facilitar a identificação.
+
+	-header (cabeçalho)
+	-main (menu ou principal) tudo o que não for "header" ou "footer" será "main"
+	-footer (rodapé)
+
+Flexbox: caixas flexiveis.
+
+responsividade = se adequar às resoluções da página ( se adequar para uma tela de dimensão diferente - tela de pc, celular etc). O conteúdo não irá quebrar tentará compactar até o máximo para caber dentro da página.
+
+Para que o conteúdo fique com um alinhamento, você usa o comando "display: flex". Por padrão o comando entende para deixar em linha. Mas é bom especificar pois pode ser deixado em "linha" ou "coluna"
+ EX:
+	div
+	{
+		display: flex;
+		flex-direction: row/ row-reverse/ column/ column-reverse
+	}
+
+  row: deixa os elementos em linha na ordem em que já está por padrão, já que o próprio código mostra a ordem em que os elementos aparecem. Em alguns casos específicos será necessário colocar o row no flex-direction.
+  row-reverse: ira inverter a ordem dos elementos.
+  
+  column: deixa na ordem no formato em coluna na ordem em que já estão por padrão assim como o row explicado acima.
+  column-reverse: inverte a ordem dos elementos em coluna.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+RELEMBRANDO: Uma DIV quando não tem um conteúdo dentro, nem uma altura ou largura, ela irá desaparecer.
+
+Relembrando os comandos para o display: flex e o flex direction...
+
+Comando para alinhar o conteúdo ou outros elementos no meio. "Não importa o tamanho da sua caixa, você sempre vai ficar no meio".
+
+Dentro do pai --->   justify-content: center/ end/ start;
+
+
+Para alinhar os elemento na vertical assim como foi feito com o "justify" o comando usado é o align-items
+
+Dentro do pai ---> align-items: center/ end/ start;
+
+
+
+Os comandos acima funcionam de um jeito para o comando "display-flex com o flex direction: row". Porém, se o comando for aplicado para o "flex-direction: column" irá funcionar de um jeito diferente.
+
+Basicamente será a mesma coisa mas funciona de um jeito invertido.
+o "justify-content" irá alinhar a coluna na vertical e o "align items" alinhará na horizontal
+
+
+"space-around" irá colocar um espaçamento entre os elementos, distribuindo de forma igual as DIVs ao longo da linha ou coluna
+EX:     justify-content: space-around
+	justify-content: space-between	Todos os três se comportam de uma maneira diferente mas no intuito de alinhar a div
+	justify-content: space-evenly
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Alinhar um elemento apenas para cima ou para baixo/ para esquerda ou direita é usado o comando align-self. É um alinhamento para ele próprio.   Só irá funcionar quando tiver um display flex confugurado no "pai".   Align self é para os "filhos".
+
+o display:flex  ---> flex-direction é para o "pai"
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Outra maneira de alinha a página, diferente do display:flex é usando o método do CSS Grid. Para aplicar o comando do grid primeiro deve aplicar "display-grid" no pai de quem você quer alinhar. 
+EX: 	.container
+	{
+		display: grid
+	}
+
+Em cada um dos filhos que serão alinhados você deve colocar uma "etiqueta" colocando o comando "grid-area: nome-da-classe-filha ou nome da propriedade" que está mexendo.
+
+EX:	.container-topo
+	{
+		grid-area: container-topo
+	}
+
+Voltando para o pai, após configurado as etiquetas dos filhos que serão alinhados, usaremos o comando para organizar os quadrantes na página chamado "grid-template-areas". A partir deste comando você organizará no formato de linhas e colunas.
+
+EX:	.container
+	{
+		display: grid
+
+		grid-template-areas:
+
+		"topo topo topo"		ou	"topo conteudo imagem"
+    		"conteudo conteudo conteudo"		"topo conteudo imagem"
+    		"imagem imagem imagem"			"topo conteudo imagem"
+		;
+	}
+
+---------------------------------------------------------------------------------------------------------------------------
+
+"gap" é o comando para criar um espaçamento entre os elementos grid que foram configurados. Aplicando somento o comando "gap" aplicará o espaçamento para os quatro lados.
+
+row-gap: aplica o espaço na parte de cima e baixo.
+column-gap: aplicará os espaços nas laterais dos elementos. 
+
+OBS: Os espaçamentos serão aplicados apenas entre as divs. Os elementos que estão no inicio e no fim da página não aplicarão espaços nas suas extremidades porque não estão em contato com outra div.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+cursor: zoom-in
+	zoom-out
+	pointer (mais usado)
+	default (para deixar o cursor padrão (a flechinha comum) quando tiver um link e queira tirar o estilo automaticamente aplicado)
+
+Esse comando aplicar apenas o estilo no cursor do mouse quando passa o cursor por cima de algum elemento clicável.
+
+
+
+Resoluções: sempre considerar a largura da dimensão. A altura não será considerada.
+
+celular aproximandamente: 320px até uns 700px
+
+tablet/iPad aproximandamente: 750px até uns 1000px
+
+notebook ou PC aproximadamente: 1000px pra cima
+
+
+@media (max-lenght: 700px)
+É um comando que coloca uma condicional no elemnto que você irá configurar. Significa que quando a página tiver uma largura menor que 700px, quando for obedecida a condição, as configurações serão aplicadas de acordo com a informações dentro das chaves.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Quando colocar um @media para mais de um dispositivo, pode ser que dê conflito nas informações.
+
+Por isso quando estiver configurando para celular e tablet você precisa colocar max-width e min-width
+
+	/* Tablet */
+EX: @media (max-width: 900px) and (min-width: 601px)
+
+
+	/* celular */
+    @media (max-width: 600px)           não é preciso colocar o minimo para celular porque menor que o valor máximo estipulado o código entende que vai ser para disposito mobile.
+
+Flex-wrap é um comando usado para colocar os elementos que estão sendo expremidos em linha para se ajustarem para baixo. Quanto mais se expreme, mais para baixo os outros elementos são jogados
+
+Pode ser aplicado depois do display:flex, flex-direction: row    Sem esses comandos antes o flex-wrap não funciona.
+
+Aplica-se no pai dos elementos flex-wrap: wrap;
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Para sobrepor uma div você fará uma div pai e uma div filho. O Pai será configurado normalmente e será adicionado um comando ao filho.
+
+No filho será adicionado o comando "position: absolute;" para informar que a div está sobrepondo a outra. Para que ela não suma da página, depois de haver colocado o comando, será necessário colocar uma largura (width) para que ela possa funcionar.
+
+A div sobreposta sempre vai ficar acima do "pai", dificilmente irá sobrepor os irmãos dela.
+
+
+O comando "position: fixed" faz com que o elemento que você colocou fique fixado na página, e independente do quanto rolar a tela, ele sempre irá acompanhar e ficará na posição que você determinou.
+
+
+Ambas as divs, você pode posicionar usando comando left, top, bottom, right  apenas para quando é usado o comando "position".

@@ -1,0 +1,202 @@
+Lista de comandados:
+
+<h1>titulos</h1>
+<h2>titulos</h2>
+<h3>titulos</h3>
+<h4>titulos</h4>
+<h5>titulos</h5>
+<h6>titulos</h6>
+
+
+<p>parágrafo<\p>
+
+
+<br> pular uma linha  (break)
+
+
+<hr> fazer uma linha
+
+
+<i> itálico </i>
+<strong> negrito </strong>  OU <b> negrito também </b>   (pode ser que em alguns browsers o <b> não funcione mais. O mais recomndado seria o comando <strong>.)
+<u> sublinhado </u>
+
+
+<ul> lista não ordenada <ul>   (o tipo de lista que estará sendo feita sem uma ordem específica)
+<ol> lista ordenada </ol>      (o tipo de lista que estará sendo feita será ordenada por números)
+
+<li> item da lista </li>       (para cada item da lista que será acrescentado deve ser colocado o comando <li></li>
+
+
+
+---Não esqueça da identação:
+
+	<ol>
+		<li> <h4>Pave de morango</h4> </li>
+		<ul>
+			<li> Leite condensado </li>
+			<li> Creme de leite </li>
+			<li> Chocolate </li>
+			<li> Morango </li>
+		</ul>
+	</ol>
+
+
+
+
+<!-- O comentário é feito com esses código dentro do html (exclamação traço traço) -->
+
+<button> Cria um botão na página </button>
+
+<small> deixa a letra menor </small>
+
+---"Meta" é o comando para dar um atributo(característica) para um comando. META = DADOS ---> configuração de dados da página.
+
+<meta lang = "pt-br"/> para dizer que a página é portugues do Brasil (meta=atributo) (lang=language)
+<meta charset = "UTF-8"/> para dizer que a página aceita caracteres da lingua portuguesa (char=caractere) (set=configurar) (UTF-8=código que indica os caracteres do pt br)
+
+Quando usar um atributo será utilizada a aspas para indicar o atributo( meta atributo = "configuração desejada")
+
+---Para fazer um link <a href = "link do site"> Clique aqui ou acesse </a>
+href = referencia que você vai usar para que, ao clicar, você tenha acesso ao hiperlink
+
+---Para abir uma nova aba quando clicar no link criado preciso aplicar, logo depois do href na mesma tag, o atributo "target".
+---O "target" terá 4 opções:
+	-self: abre o link na mesma aba;
+	-blank: abre o link abrindo uma nova aba no navegador;
+	-parent: pode abrir o link se comportando como "self"caso não haja um browser parente mas tem a função de 
+	-top: 
+
+ No final das contas ficará <a href = "link do site" target="blank"> Clique aqui ou acesse </a>
+
+---Para colocar uma imagem no seu site, você deve colocar <img src = "link da imagem específica"/>
+<img> = imagem
+src = source (fonte)
+
+---Você pode dimensionar a imagem também usando "width(largura)" e "height(altura)". Aplicando o código seria:
+<img src = "link da imagem específica" width= 500px height= 300px />
+
+EMBORA VOCÊ POSSA DIMENSIONAR PELO HTML É MUITO MELHOR FAZER O DIMENSIONAMTENTO PELO CSS.
+
+---Para colocar uma imagem que está nos seus arquivos, você deve fazer o download da imagem que seja JPG, PNG ou JPEG pra que possa dar certo. Abra a imagem sozinha em uma guia e faça + salvar como. A pasta que você deve salvar é dentro da mesma pasta do HTML que você está criando. Se o "folder do seu HTML for o "aula alguma coisa", salve nesta pesta e você terá acesso à imagem.
+
+
+---Para anexar vídeo: vá ao video do youtube, clique em compartilhar e selecione a opção incorporar. A página vai forenecer um código em html do vídeo. Basta clicar em copiar e colar no seu código.
+
+A outra maneira, é baixando o video, sempre em formato .mp4, .ogg, .wma.  Você usa o código <video>, o arquivo que colocou na pasta, e então fecha a tag.   EX: <video> clipe.mp4 <video>
+
+
+--- id -> número de identificação     o objetivo é tornar algo único. é uma etiqueta que torna ele único
+--- class -> classe       o objetivo é tornar algo parte de um grupo. é uma etiqueta para determinar um conjunto.
+
+Eles são colocados dentro das tags de comando para ser definido o atributo para o que você está fazendo.
+ex:  id="palavas"
+     class="palavras"
+
+<h1 class="palvras"> <h1>       todas as as tags que tiverem esse class terão o mesmo atributo aplicado
+
+<h1 id="palavras"> <h1>         todas as tags que tiverem esta etiqueta terão um atributo único e específico para aquela função.
+
+
+input >>> entrada de dados.   Toda a maneira de o humano se comunicas com a máquina. (digitando, clicando, falando, selecionando). Depois você escolhe o tipo de interação que você irá colocar, por meio do atributo chamado type.
+EX: 	<input type="text"/>		texto normal
+	<input type="checkbox"/>	caixa de check
+ 	<input type="email"/>		qualquer tipo de e-mail será aceito (se escrito no padrão correto "@alguma coisa")
+	<input type="password"/>	ao digitar só aparecerá as bolinhas
+	<input type="date"/>		selecionar data
+	<input type="month"/>		Seleciona somente o mês do ano
+	<input type="week"/>		seleciona a semana
+	<input type="year"/>		seleciona o ano apenas
+	<input type="time"/>		seleciona o horário
+	<input type="file"/>		anexar arquivo
+	<input type="color/>		escolher uma cor
+	<input type="submit"/>		botão para enviar informação
+	<input type="reset/>		uma caixa de limpar a informação
+
+
+
+<select>
+<option>   vai abrir uma caixa para selecionar opções. Como exemplo "escolha seu estado"
+
+ <select>
+
+          <option> </option>      (o primeiro pode deixar como um espaço em branco)
+          <option> solteiro </option>
+          <option> casado </option>
+          <option> divorciado </option>
+          <option> união estável </option>
+            
+</select>
+
+<placeholder> atributo que é aplicado para preencher espaços vazios antes de serem colocadas as informações solicitadas pelos inputs.
+
+Como se aplica:   <input type= "email" placeholder= "e-mail"/>  quando a página pede seu e-mail mas já deixa uma "pré-mensagem" translúcida, dentro da caixa de texto, informando o que está sendo pedido.
+
+exemplo: <label> Senha: <input type="password" placeholder="xxxxxxx"/> </label>
+
+	<label> 
+
+		Senha: <input type="password" placeholder="xxxxxxx"/> 
+
+	</label>
+
+
+Toda a informação que a página pede precisa ir para algum lugar. É necessário utilizar a tag <form> </form>. Ele é um comando para que a informação agregada seja enviada para algum lugar (como se fosse uma pasta).
+
+O <form> é uma tag geral, tipo o <body>, mas o form fica dentro do body. Sempre que tiver inputs o fomr precisa ser usado. O label é para ser usado em cada input.
+
+Junto ao form, há um atributo chamado "action", que é para onde você deve mandar a informação cadastrada. Junto ao action tem o outro atributo chamado "method" que é como vamos mandar.
+
+		<form action="algum lugar" method="get ou post"  
+	      --Get e Post são os dois métodos de como enviaremos a informação--
+
+
+
+atributos para form:
+
+"max 5" restringe que o usuário digite no máximo 5 caracteres no campo de formulário somente na hora de eviar os dados.
+"min 5"     "      "       "       "      mínimo 5 caracteres no campo de formulário    "         "       "       "   .
+"maxlength" restringe que o usuário digite no máximo o número de caracteres no campo do formulário, antes mesmo de enviar
+"minlength" restringe que o usuário digite no mínimo o número de caracteres no campo do formulário, antes mesmo de enviar
+
+
+"required" informa que aquele determinado dado solicitado obrigatório ser preenchido
+
+EX: Senha: <input type="password" placeholder="xxxxxxx" required>
+
+"value" é como se fosse o placeholder mas com algumas diferenças estéticas.
+
+
+"radio" é o atributo que coloca um (meio que checkbox) para marcar opções. A caixinha redonda que sempre vem mais de uma acompanhando
+
+	Ex:
+	        Quais as opções você tem disponibilidade?	   (eu tenho a possibilidade de escolher todas as opções)
+			<input type="radio"/> manhã
+			<input type="radio"/> tarde
+			<input type="radio"/> noite
+			
+		Escolha uma das opções abaixo:			   (eu vou escolher apenas uma das opções)
+			<input type="radio" name="exemplo"/> manhã
+			<input type="radio" name="exemplo"/> tarde
+			<input type="radio" name="exemplo"/> noite
+
+Quando eu quero apresentar para a página que no meu "radio" quero que a pessoa só use uma das opções apresentadas no grupo, eu devo usar o atributo "name" para todas as opções do grupo, dando o mesmo nome para todos daquele grupo como no exemplo "Escolha uma das opções abaixo".  
+
+
+
+	Todas os comandos abaixo são divs, porém com nomes diferentes para ajudar a organizar e separar o conteudo
+
+<nav> é o comando de div para menu de navegação. Ao invés de usar "div" para colocar a lista, você usa nav
+
+<aside> é uma div para conteúdo oculto. Quando houver um conteúdo que não aparecerá naturalmente na página, você usa o aside (você saberá identificar se é um conteúdo oculto por causa desse comando{anúncios, pop-ups, etc} )
+
+<section> é uma div que é usada para separar as seções do site. Somente para separar os conteúdos.
+
+A ideia é que cada um fique dentro das outras divs (header, main e footer)
+EX:
+	<header>				<main>					
+		<nav>					<section>				
+			<ul>					<p>
+			</ul>					</p>
+		</nav>					</section>
+	</header>				</main>

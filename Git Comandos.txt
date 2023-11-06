@@ -1,0 +1,81 @@
+clear: limpa a lista de comandos que foi aplicada. Não desfaz nada, apenas limpa a tela dos comandos anteriores.
+
+dir: mostra todos os arquivos da pasta que você abriu no Git que ela contem.
+
+cd ..(cd espaço ponto ponto): te direciona para a pasta pai da pasta de onde você estava.
+EX: arquivos > AulaGit > aula 01	Se você está na pasta "aula 01" e aplica o comando "cd .." ele te joga para a pasta AulaGit. Ele volta uma pasta
+
+Há também o processo inverso, onde você entra em uma pasta específica. Para acessar o pasta desejada você precisa colocar o nome exatamente como o git interpreta e mostra pra você quando aplica o comando "dir"
+ cd (nome da pasta no formato que o git mostra)
+
+EX: arquivos > AulaGit > aula 01	Se você está na pasta "AulaGit" e aplica o comando "cd aula\ 01". O git irá te direcionar para a aula 01.
+
+
+
+	Atentar-se para colocar os espaços necessários. Quando uma pasta ou arquivo tem nome composto (separado por espaço), o git interpreta o espaço com uma barra invertida "\" é o espaço como no exemplo acima da aula 01. O nome da aula no git será "aula\ 01" e isso será para todos os outros arquivos ou pastas que tem nome com espaço no meio.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Processo de commit é dos passos da comunicação que é estabelecida entre o pc e o git. É a pate em que o pacote de informação, depois de juntado, é enviado para o git.
+
+Add é o processo no meio, assim como o commit, que junta o pacote de informações.
+
+PC 	---- add ---->		pacote de info		---- commit ----> 	git
+
+
++ git init: serve para "iniciar" o processo para atualizar ou adicionar os arquivos 
+
++ git status: comando para verificar se os mesmos códigos que estão no computador também estão no github.
+
++ git add -A: é para adicionar todos os arquivos.
+
++ git diff: mostra as mudanças dos arquivos que foram alterados.
++ git diff --name-only: pede para que o nome dos arquivos que foram alterados seja mostrado
+
+commit -m: é o comando que vai fazer com que você envie o arquivo para o git. usamos a expressão "dar/faxer um commit" quando vai fazer um commit você precisa dar nome para a atualização. Esse nome ficará entre aspas.
+
+		EX:  git commit -m "Primeiro commit"
+
+
+git config --global user.name "Breno Gomes" : código para configurar o nome do usuário. É necessário fazer esse processo toda vez que logar em uma máquina nova. Apenas uma vez será necessário.  Voce pode configurar quantas vezes quiser.
+
+git config --global user.name: aplicando esse código, irá informar o usuário configurado anteriormente.
+
+git config --global user.email "breno.mypathway@gmail.com"  O mesmo processo para saber se o email foi cadatrado como no name.
+
+--------------------------------------------------------------------------------------------------------------------------
+
++ git log: é o comando para ver quais foram os commits feitos. Neste comando são apresentados os arquivos que foram enviados para o git, o horário e data, o nome do usuário e e-mail.
+
++ git reset: Para recuperar algum arqivo que foi commitado, caso tenha dado algum erro no pc antes de salvar ou tenha acontecido alguma exclusão acidental e não é possível desfazer na pasta, basta puxar a última atualização que está no git.
+Há dois tipo de reset, --hard e o --soft.
+
+	EX: git reset --hard "o nome da versão commit que quer puxar"
+
+Quando você usa o git reset, todos os commits que você deu depois do commit para o qual você voltou irão sumir.
+	EX: eu fiz 5 commits e quero voltar para o terceiro. Eu faço o comando (git reset --hard "Terceiro Commit") e depois que eu concluir o comando os commits "Quarto Commit" e o "Quinto Commit" irão desaparecer como se não houvesse existido.  Fazendo o comando "git log" você poderá verificar a conclusão da ação.
+
+--------------------------------------------------------------------------------------------------------------------------
+
++ git reset --soft: Semelhante ao hard, se ocorreu algum erro, você pode resetar e voltar para versão anterior. Porém, diferente do "hard", que apaga o commit e junto dele o conteúdo do arquivo colocado no commit, o "soft" apenas apaga o commit, mas o conteudo fica no arquivo. É como se o soft voltasse para o momento antes de dar o commit apenas, ao invés de apagá-lo e resetá-lo por inteiro.  É O MAIS RECOMENDADO.
+
+--------------------------------------------------------------------------------------------------------------------------
+
++ git remote add origin: é como se fosse o git init só que para iniciar comunicação com a nuvem (GitHub).
+remote (remoto), add(faça a comunicação com a nuvem), origin(nome que escolhi, pode ser qualquer outro nome) e depois o link que representa o meu github.
+É necessário fazer esse comando apenas uma vez.
+
++ git push -u origin master: comando que enviará as informações do git para o github.
+Origin= GitHub
+Master= git
+*** empurre as informações do git para o github.
+
+--------------------------------------------------------------------------------------------------------------------------
+
++ git pull origin master: comando que puxa as informações do github para o seu pc
+
+
+Para criar uma cópia de um repositório, ele precisa ser público. a opção que deverá selecionar neste repositório será o "fork" (disponível no git hub). Clique na flecha ao lado de fork e depois "creat new fork".
+Assim que criar um fork (que é uma cópia para os seus repositórios) você irá dentro desta cópia e irá copiar o link do repositório. Aplique o código abaixo.
+
++ git clone (link do repositório que quer clonar): Você pode clonar o repositório e puxar os arquivos do projeto para não alterar o original. Então você pode mexer à vontade, sem preocupação, que o arquivo original não será afetado.
