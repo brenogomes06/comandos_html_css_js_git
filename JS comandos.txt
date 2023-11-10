@@ -77,6 +77,8 @@ if(o que está acontecendo for verdade)
 	configuração que você quer usar
 }
 
+é uma comparação.
+
 -------------------------------------------------------------------------------------------------------------------------
 
 +nome da variavel.lenght -> string  (conta o número de caracteres que a variável tem. tanto letras como acentos e outras paradinhas)
@@ -103,6 +105,8 @@ Depois de identificado no código JS, você coloca a variavel e seu nome= ... a 
 
 +document.getElementById("nome do id")
 
+**** faça um teste com o console.log para se certificar de que a página conseguiu encontrar o elemento. As vezes o código dá errado porque o id ou classe pode ter sido digitado errado por acidente.
+
 						--------------------------
 
 O processo será parecido para guardar classe dentro de uma variável, porém há alguma diferenças importantes para serem notadas.
@@ -123,4 +127,60 @@ var informacao = document.getElementsByClassName("texto")[2]
 					-------------------------------------------
 
 
++textContent é um comando usado para imprimir a informação do html na página, podendo ser alterado o conteúdo do html de acordo com o que foi programado no JS.
+EX: nome da variável relacionada ao id ou class.textContent
+	var mensagem_1 = document.getElementById("nome do id no html");
 	
+	mensagem_1.textContent = "texto no html" + alguma variável que será utilizada + "outro texto"; 
+
+-------------------------------------------------------------------------------------------------------------------------
+
+É possivel acessar o estilo da página pelo JS também. Só que aqui pelo JS o intuito de acessar o CSS será para casos específicos, para que um elemento seja estilizado de uma maneira para determinado momento do meu site.
+
++style: para acessar o estilo, preciso de usar tudo o que aprendi sobre o id/class para aplicar naquele elemento. Preciso de uma variável e de um id/class.
+EX: NomeDaVariável.style.comandoDoCSSqueQueroUsar = "EstiloQueQueroAplicar";
+
+<h1 id="titulo> Olá <h1> (HTML)
+
+
+var palavra = document.getElementById("titulo");
+palavra.style.color = "blue";
+palavra.style.backGroundColor = "red";
+palavra.style.margin = "0px 10px 0px 10px";
+palavra.style.width = "50px" ou "30%";
+
+					-------------------------------------------
+
+
+Acessar um dado pelo input do html. Vou fazer isso pelo value do input.
+EX:
+var nome = document.getElementById("dado"); primeiro passo é acessar o elemento input que vai pegar o dado.
+
+nome = nome.value;  depois eu preciso acessar o valor do input colocando o nome da variavel.value.
+
+var guardar_nome = nome;  Depois guardo o nome(que tem a informação do value) dentro de outra variável.
+
+
+Resumindo, o caminho para se guardar a variável:
+1. acesse o elemento html pelo id
+2. determine o valor da variável usando o ".value"
+3. fazer uma nova variável que guardará a variável anterior(que tem um valor determinado no .value).
+4. Coloque na página usando o textContent.
+
+-------------------------------------------------------------------------------------------------------------------------
+
++ function : serve para fazer literalmente uma determinada função em um momento específico no seu site.
+Ele permitirá que quando você execute seu site, alguma ação que você configurar só acontecerá depois que for solicitado pelo programa.
+EX:
+	function nomedafunção()
+	{
+		console.log
+	}
+
+	Mostrar()  -> escrever o nome depois do código acima, irá fazer com que a função apareça no console.
+-- Primeiro determina e cria a função, depois você chama a função.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Para criar uma variável dentro de uma função, use o comando let.
++let: é uma variável que só pode ser usada dentro da função, para um único momento. A diferença é que uma "var" pode ser usada pelo código inteiro.
