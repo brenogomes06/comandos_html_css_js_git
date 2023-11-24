@@ -200,3 +200,16 @@ EX:
 			</ul>					</p>
 		</nav>					</section>
 	</header>				</main>
+
+-------------------------------------------------------------------------------------------------------------------------
+
++onclick: é um atributo colocado no elemento para que possa ser realizado um função relacionada à progamação JS. Tornar o elemento clicável para que a ação programada aconteça em um determinado momento em que a função for chamada.
+ EX:	<h1 onclick="testando()> olá </h1>
+
+O "testando()" é o nome da função que estará no JS.
+
+Mas para a funcção dar certo, é necessário ter um id no elemento para que o trabalho seja realizado pelo JS.
+Então o código fica:
+     <h1 onclick="testando() id="titulo_h1"> olá </h1>    ou   <h1 id="titulo_h1 onclick="testando()> olá </h1>
+	
+	A ordem tanto faz, contanto que tenha o elemento para linkar no JS e o atributo patra chamar a função.

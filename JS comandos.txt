@@ -107,7 +107,9 @@ Depois de identificado no código JS, você coloca a variavel e seu nome= ... a 
 
 **** faça um teste com o console.log para se certificar de que a página conseguiu encontrar o elemento. As vezes o código dá errado porque o id ou classe pode ter sido digitado errado por acidente.
 
+
 						--------------------------
+
 
 O processo será parecido para guardar classe dentro de uma variável, porém há alguma diferenças importantes para serem notadas.
 
@@ -124,7 +126,8 @@ var informacao = document.getElementsByClassName("texto")[2]
 ^
 |  significa que eu guardei a div dentro da variável que eu nomeei como informacao.
 
-					-------------------------------------------
+
+						--------------------------
 
 
 +textContent é um comando usado para imprimir a informação do html na página, podendo ser alterado o conteúdo do html de acordo com o que foi programado no JS.
@@ -149,7 +152,9 @@ palavra.style.backGroundColor = "red";
 palavra.style.margin = "0px 10px 0px 10px";
 palavra.style.width = "50px" ou "30%";
 
-					-------------------------------------------
+
+						--------------------------
+
 
 
 Acessar um dado pelo input do html. Vou fazer isso pelo value do input.
@@ -184,3 +189,36 @@ EX:
 
 Para criar uma variável dentro de uma função, use o comando let.
 +let: é uma variável que só pode ser usada dentro da função, para um único momento. A diferença é que uma "var" pode ser usada pelo código inteiro.
+
+-------------------------------------------------------------------------------------------------------------------------
+
++onclick: é um atributo colocado no elemento para que possa ser realizado um função relacionada à progamação JS, porém ele é utilizado no HTML. Tornar o elemento clicável para que a ação programada aconteça em um determinado momento em que a função for chamada.
+ EX:	<h1 onclick="testando()> olá </h1>
+
+Então, ao invés de montar a função e logo abaixo do código chamar ela. A função será chamada no HTML, dentro do elemento.
+
+-------------------------------------------------------------------------------------------------------------------------
+
++oninput: Quando algo foi digitado, apagado, alterado dentro do input você aplicará o comando que estiver configurado na função JS. (exclusivo para o input)
+
++onmouseover: Evento de quando passa o mouse por cima do elemento, irá mudar de acordo com as configurações na função do JS.
+
++onmouseout: Parecido com o onmouseover, quando tirar o mouse de cima irá aplicar as conigurações da função JS.
+
++onload: Quando carregar a página fará o que estiver configurado na função JS.
+
++onfocus: Quando quero chamar uma função somente quando clico no input. Ex: aparecer alguma mensagem somente quando focalizo/clico no input.    (também exclusivo para o input).
+
+-------------------------------------------------------------------------------------------------------------------------
+
++classList: aplica o estilo configurada de uma classe no CSS, mas em tempo real.
++add: atriburo que serve para avisar no JS que o estilo daquela classe está sendo adicionada.
++remove: do mesmo jeito que o "add", mas avisa que irá remover o estilo da classe.
+EX:
+	NomeDaVariável.classList.add("NomeDaClasse")
+
+
+Para chegar até esse ponto você precisa criar uma função, depois crie um let para acessar o id que está no HTML. Após criar a variável "let" use o NomeDaVariável.classList.add("NomeDaClasse") O nome da classe você determinou no CSS.  Lembre-se que não precisa adicionar a classe no html.
+
+Assim que colocar a função que criou dentro do "onclick" do html, basta só testar o codigo na página.
+Quando clicar em cima do elemento, a função será aplicada.
